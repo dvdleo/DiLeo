@@ -1,5 +1,6 @@
 <?php include('layouts/header.php'); ?>
 <?php include('layouts/head.php'); ?>
+<?php include ('php/db.php'); ?>
 
 <div class="container">
 	<form>
@@ -21,30 +22,9 @@
 				<input type="password" required="required" class="form-control" placeholder="Password">
 			</div>
 		</div>
-		<br>
 		<div>
 			<button type="button" class="btn btn-outline-success">S'inscrire</button>
 		</div>
 	</form>
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php include('layouts/footer.php'); ?>

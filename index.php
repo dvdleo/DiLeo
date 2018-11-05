@@ -1,5 +1,6 @@
 <?php include('layouts/header.php'); ?>
 <?php include('layouts/head.php'); ?>
+<?php include ('php/db.php'); ?>
 
 <?php
 $title ='Accueil';
