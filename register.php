@@ -3,7 +3,7 @@
 <?php include ('php/db.php'); ?>
 
 <div class="container">
-	<form>
+	<form method="POST" action="index.php">
 		<div class="card-body">
 			<div class="form-group">
 				<label for="name">Nom</label>	

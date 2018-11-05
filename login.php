@@ -14,4 +14,10 @@
 				<input type="text" required="required" class="form-control" placeholder="password">
 			</div>
 		</div>
+		<div>
+			<button type="button" class="btn btn-outline-success">Se connecter</button>
+		</div>
 	</form>
+
+
+
