@@ -1,8 +1,8 @@
- <footer>
-        // MON FOOTER
+ 	</main>
+ 	<footer>
     </footer>
-<?php include_once('layouts/javascript.php'); ?>
 
-<body>
+	<?php include_once('layouts/javascript.php'); ?>
+
 </body>
-
+</html>
