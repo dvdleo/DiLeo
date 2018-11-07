@@ -1,17 +1,15 @@
 <?php 
 require("db.php");
 
-echo 'BON';
-die();
-
 // est ce que le formulaire est soumis ? 
-if(!empty($_POST)) {
+if(isset($_POST)) {
 
 	// on crée des variables plus sympas avec les données du formulaire 
-	$name 	= $_POST['name'];
-	$place 	= $_POST ['place'];
-	$date 	= $_POST ['date'];
-	$price 	= $_POST ['price'];
+    $users_id    = $_SESSION['user_id'];
+	$name 	     = $_POST['name'];
+	$place 	     = $_POST['place'];
+	$date 	     = $_POST['date'];
+	$price 	     = $_POST['price'];
 
 	// On vérifie que les champs requis sont bien remplis
 	if(empty($name)) {
@@ -24,19 +22,21 @@ if(!empty($_POST)) {
 		$error="Veuillez ajouter les prix des billets !";
 	}
 
-	echo 'TEST';
-	die();
-
 	//Si le formulaire est valide...
-	if(isset($error)) {
-		$sql = "INSERT INTO events_nantes ( category, events, users )
-		VALUES (NULL, :category_id, :name, :place, :date , :price, NOW())";
+	if(!isset($error)) {
+		$sql = "INSERT INTO events (user_id, name, place, date, price, date_created)
+		VALUES ( :user_id, :name, :place, :date , :price, NOW() )";
 
 		$stmt = $conn->prepare($sql);
-		$stmt->bindValue(":name", $name);
-		$stmt->bindValue(":place", $place);
-		$stmt->bindValue(":date", $date);
-		$stmt->bindValue(":price", $price);
+        $stmt->bindValue(":user_id",          $_SESSION['user_id'];
+		$stmt->bindValue(":name",             $_POST['name']);
+		$stmt->bindValue(":place",            $_POST['place']);
+		$stmt->bindValue(":date",             $_POST['date']);
+		$stmt->bindValue(":price",            $_POST['price']);
 		$stmt->execute();
+        
+        echo 'GOOD';
+        die();
+        
 	}
 }
