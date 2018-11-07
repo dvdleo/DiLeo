@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title ='Accueil';
 $description = '';
 ?>
@@ -15,5 +16,7 @@ $description = '';
 		</div>
 	</div>
 </div>
+
+
 
 <?php include('layouts/footer.php'); ?>

@@ -12,7 +12,12 @@
             <a class="nav-link" href="index.php">Accueil</a>
           </li>
 
-
+          <?php
+        //pas connecté
+        if (empty($_SESSION ['member'])) {
+          echo "Vous n'êtes pas connecté";
+        }
+        ?>
           <li class="nav-item">
             <a class="nav-link" href="login.php">Connexion</a>
           </li>
@@ -20,9 +25,12 @@
             <a class="nav-link" href="register.php">Inscription</a>
           </li>
 
+          <?php
 
-          
-          
+        else{
+          echo "Vous êtes connecté en tant que" . $_SESSION ['user']['last_name'];
+        }
+        ?>
           <li class="nav-item">
             <a class="nav-link" href="add_event.php">Ajouter un évènement</a>
           </li>

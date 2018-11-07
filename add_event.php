@@ -1,4 +1,14 @@
-<?php include('layouts/header.php'); ?>
+
+<?php 
+session_start();
+include('layouts/header.php'); ?>
+<?php
+if (empty($_SESSION['user'])){
+	header("Location: login.php");
+	die();
+}
+
+?>
 
 <div class="container">
 	<form method="POST" action="php/add_event.php">

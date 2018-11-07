@@ -15,13 +15,13 @@ if(!empty($_POST)) {
 
 	// On vérifie que les champs requis sont bien remplis
 	if(empty($name)) {
-	$error = "Veuillez renseigner le titre de l'évènement !";
+		$error = "Veuillez renseigner le titre de l'évènement !";
 	} elseif (empty($place)) {
-	$error="Veuillez renseigner le lieu de l'évènement!";
+		$error="Veuillez renseigner le lieu de l'évènement!";
 	} elseif (empty($date)) {
-	$error="Veuillez renseigner les dates de l'évènement!";
+		$error="Veuillez renseigner les dates de l'évènement!";
 	} elseif (empty($price)) {
-	$error="Veuillez ajouter les prix des billets !";
+		$error="Veuillez ajouter les prix des billets !";
 	}
 
 	echo 'TEST';
