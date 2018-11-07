@@ -1,5 +1,5 @@
 <?php 
-require("php/db.php");
+require("db.php");
 
 echo 'BON';
 die();
