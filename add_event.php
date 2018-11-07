@@ -13,8 +13,6 @@ if (empty($_SESSION['user'])){
 <div class="container">
 	<form method="POST" action="php/add_event.php">
         
-        <input type="hidden" name="user_id" value="01" required="required">
-        
 		<div class="form-group">
 			<label for="name_event">Titre de l'évènement</label>	
 			<input type="text" name="name" required="required" class="form-control" placeholder="Title event">
@@ -29,7 +27,7 @@ if (empty($_SESSION['user'])){
 		</div>
 		<div class="form-group">
 			<label for="price">Prix réservation</label>
-			<input type="price" name="price" required="required" class="form-control" placeholder="Price event">
+			<input type="number" name="price" required="required" class="form-control" placeholder="Price event">
 		</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-outline-success">Ajouter l'évènement</button>

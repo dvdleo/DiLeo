@@ -1,11 +1,13 @@
 <?php 
 require("db.php");
+session_start();
+
 
 // est ce que le formulaire est soumis ? 
 if(isset($_POST)) {
 
 	// on crée des variables plus sympas avec les données du formulaire 
-    $users_id    = $_SESSION['user_id'];
+    $users_id    = $_SESSION['user']['id'];
 	$name 	     = $_POST['name'];
 	$place 	     = $_POST['place'];
 	$date 	     = $_POST['date'];
@@ -28,15 +30,14 @@ if(isset($_POST)) {
 		VALUES ( :user_id, :name, :place, :date , :price, NOW() )";
 
 		$stmt = $conn->prepare($sql);
-        $stmt->bindValue(":user_id",          $_SESSION['user_id'];
+        $stmt->bindValue(":user_id",          $_SESSION['user']['id']);
 		$stmt->bindValue(":name",             $_POST['name']);
 		$stmt->bindValue(":place",            $_POST['place']);
 		$stmt->bindValue(":date",             $_POST['date']);
 		$stmt->bindValue(":price",            $_POST['price']);
 		$stmt->execute();
         
-        echo 'GOOD';
-        die();
+       header('Location: ../');
         
 	}
 }

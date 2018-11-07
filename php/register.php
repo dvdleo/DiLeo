@@ -35,10 +35,9 @@ if(isset($_POST)) {
 		$stmt->bindValue(":password", $_POST ['password']);
 		$stmt->execute();
 
-		echo 'TEST A';
-		die();
+		session_start();
+         $_SESSION['connected'] = true;
+        
+        header('Location: ../');
 	}
-
-	echo 'TEST B';
-	die();
 }
