@@ -29,9 +29,7 @@ if (empty($_SESSION['user'])){
 			<label for="price">Prix réservation</label>
 			<input type="number" name="price" required="required" class="form-control" placeholder="Price event">
 		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-outline-success">Ajouter l'évènement</button>
-		</div>
+		
 	</form>
 </div>
 
