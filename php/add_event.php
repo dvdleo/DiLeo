@@ -24,8 +24,10 @@ if(isset($_POST)) {
 		$error="Veuillez ajouter les prix des billets !";
 	}
 
+
 	//Si le formulaire est valide...
 	if(!isset($error)) {
+
 		$sql = "INSERT INTO events (user_id, name, place, date, price, date_created)
 		VALUES ( :user_id, :name, :place, :date , :price, NOW() )";
 
@@ -37,7 +39,6 @@ if(isset($_POST)) {
 		$stmt->bindValue(":price",            $_POST['price']);
 		$stmt->execute();
         
-       header('Location: ../');
-        
+        header('Location: ../');
 	}
 }

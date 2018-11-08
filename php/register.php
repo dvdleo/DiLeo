@@ -28,11 +28,10 @@ if(isset($_POST)) {
 		VALUES (:first_name, :last_name, :email, :password, NOW())";
 
 		$stmt = $conn->prepare($sql);
-		$stmt->bindValue(":first_name", $_POST ['first_name']);
-		$stmt->bindValue(":last_name", $_POST ['last_name']);
-		$stmt->bindValue(":email", $_POST ['email']);
-		$password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 14]);
-		$stmt->bindValue(":password", $_POST ['password']);
+		$stmt->bindValue(":first_name", 				$_POST ['first_name']);
+		$stmt->bindValue(":last_name", 					$_POST ['last_name']);
+		$stmt->bindValue(":email", 						$_POST ['email']);
+		$stmt->bindValue(":password", 					$_POST ['password']);
 		$stmt->execute();
 
 		session_start();

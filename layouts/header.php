@@ -9,9 +9,8 @@
     <nav class="navbar navbar-expand-lg" style="background-color: purple;">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav justify-content-center">
-          <img src="logo.png" width="30" height="30" alt="">
           <li class="nav-item">
-            <a class="nav-link active" style="color: white; size: 50px;"  href="index.php">DiLeo</a>
+            <a class="nav-link active" style="color: white; font-size: 20px;"  href="index.php">DiLeo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" style="color: white" href="index.php">Accueil</a>
@@ -25,6 +24,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" style="color: lightgrey" href="logout.php">Deconnexion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: lightgrey" data-toggle="collapse" role="button" href="#debuger">Debuger</a>
             </li>
           <?php } else { ?>
             <li class="nav-item">

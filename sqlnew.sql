@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8890
--- Généré le :  mer. 07 nov. 2018 à 13:53
+-- Généré le :  jeu. 08 nov. 2018 à 08:18
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.8
 
@@ -17,14 +17,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category`
+-- Structure de la table `categories`
 --
 
-CREATE TABLE `category` (
+CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `concerts` varchar(250) NOT NULL,
-  `sports` varchar(250) NOT NULL
+  `name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'Concert'),
+(2, 'Sport');
 
 -- --------------------------------------------------------
 
@@ -48,7 +55,15 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `category_id`, `user_id`, `name`, `place`, `date`, `price`, `date_created`) VALUES
-(1, NULL, '1', 'Event de Ronan', 'Nantes', '1212-12-12', '50', '2018-11-07 14:50:28');
+(4, 1, '1', 'Tragédie ', 'Warehouse Nantes', '2018-11-27', '14', '2018-11-07 14:59:04'),
+(3, 1, '1', 'Marc Lavoine', 'Zénith Nantes', '2018-11-24', '39', '2018-11-07 14:56:29'),
+(5, 1, '1', 'Cœur de Pirate ', 'Stéréolux Nantes', '2018-11-30', '33', '2018-11-07 14:59:55'),
+(6, 1, '1', 'Sans Modération ', 'Zénith de Nantes ', '2018-12-08', '49', '2018-11-07 15:00:52'),
+(7, 1, '1', 'DR Peacok/ Darktek ', 'Warehouse Nantes', '2018-12-09', '19', '2018-11-07 15:01:38'),
+(8, 2, '1', 'Euro Féminin 2018 - Handball ', 'Palais de Sport', '2018-12-04', '5', '2018-11-07 15:03:00'),
+(9, 2, '1', 'Open National Nantes Atlantique ', 'Terrain Régional de Tennis Vertou', '2018-11-04', '60', '2018-11-07 15:03:39'),
+(10, 2, '1', 'Nantes - Lille | Basket ', 'Parc des Expo Nantes', '2018-11-02', '10', '2018-11-07 15:05:04'),
+(11, 2, '1', 'HBC Nantes - Fenix Toulouse', 'Palais des sport', '2018-11-21', '35', '2018-11-07 15:05:48');
 
 -- --------------------------------------------------------
 
@@ -77,9 +92,9 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `date
 --
 
 --
--- Index pour la table `category`
+-- Index pour la table `categories`
 --
-ALTER TABLE `category`
+ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -99,16 +114,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT pour la table `category`
+-- AUTO_INCREMENT pour la table `categories`
 --
-ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `users`
