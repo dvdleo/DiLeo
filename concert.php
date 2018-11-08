@@ -11,6 +11,7 @@
 				<div>
 					<?php foreach($events as $event){ ?> 
 					<?php if($event['category_id'] == 1){ ?>
+                      <div id="event_<?php echo $event['id']; ?>'">
 						<div style="font-size: 30px; margin-top: 20px; margin-bottom: 5px;">
 						<?php echo $event['name']; ?>
 						</div>
@@ -24,6 +25,7 @@
 						<?php echo $event['price']; ?>
 						€
 						</div>
+                          </div>
 						<?php } ?>
 					<?php } ?>
 				</div>

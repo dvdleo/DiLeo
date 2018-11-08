@@ -12,9 +12,6 @@ $description = '';
     <div class="col-sm-12 col-lg-8">
         <h1>Les prochains évènements</h1>
         <br>
-        <br>
-        
-
         <?php require_once('php/get_events.php'); ?>
         <div class="card" style="width: 18rem; float: left; margin-top: 24px;" >
             <div class="card-header" style="background-color: purple; color: white;">

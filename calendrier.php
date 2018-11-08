@@ -20,16 +20,16 @@ $('#calendar').fullCalendar({
   events: [
       <?php foreach($events as $event){ ?>
         {
-          title  : '<?php echo $event['name']; ?>',
-          start  : '<?php echo $event['date']; ?>'
+          title    : '<?php echo $event['name']; ?>',
+          start    : '<?php echo $event['date']; ?>',
+          url      : '<?php echo ($event['category_id'] == 1 ? 'concert.php' : 'sport.php'); ?>#event_<?php echo $event['id']; ?>',
         },
       <?php } ?>
   ],
-    color: 'lightgrey',
-    textColor: 'purple',
+    eventColor: '#D473D4',
+    eventTextColor: '#FFFFFF',
+    eventBackgroundColor: '#D473D4'
 });
-     
-
 </script>
 
 

@@ -2,3 +2,8 @@
 
 	list-style-type: none;
 }
+
+.fullCalendar {
+    color: lightgrey;
+    text-decoration-color: purple;
+}
