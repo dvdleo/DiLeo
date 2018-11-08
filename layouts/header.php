@@ -17,6 +17,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" style="color: white" href="calendrier.php">Calendrier</a>
+            <a href="calendar.php"></a>
           </li>
           <?php if(isset($_SESSION['connected']) && $_SESSION['connected'] === true){ ?>   
             <li class="nav-item">

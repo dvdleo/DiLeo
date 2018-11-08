@@ -1,0 +1,37 @@
+<?php
+session_start();
+$title ='Calendrier';
+$description = '';
+?>
+
+<?php include('layouts/header.php'); ?>
+
+<div id="calendar"></div>
+
+<script src="https://rawgit.com/moment/moment/2.18.1/min/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+
+<?php require('php/get_events.php'); ?>
+
+<script>
+    
+
+$('#calendar').fullCalendar({
+  events: [
+      <?php foreach($events as $event){ ?>
+        {
+          title  : '<?php echo $event['name']; ?>',
+          start  : '<?php echo $event['date']; ?>'
+        },
+      <?php } ?>
+  ],
+    color: 'lightgrey',
+    textColor: 'purple',
+});
+     
+
+</script>
+
+
+
+<?php include('layouts/footer.php'); ?>
