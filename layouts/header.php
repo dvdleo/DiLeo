@@ -5,8 +5,8 @@
 </head>
 <body>
   <?php include_once('./components/debuger.php') ?>
-  <header>
-    <nav class="navbar navbar-expand-lg" style="background-color: purple;">
+  <header class="navbar">
+    <nav class="navbar navbar-expand-lg">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav justify-content-center">
           <li class="nav-item">

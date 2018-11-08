@@ -36,7 +36,7 @@ if(isset($_POST)) {
 
 		session_start();
          $_SESSION['connected'] = true;
-        
+         $_SESSION['user']['id'] = $conn->lastInsertId();
         header('Location: ../');
 	}
 }

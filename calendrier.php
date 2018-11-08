@@ -5,6 +5,7 @@ $description = '';
 ?>
 
 <?php include('layouts/header.php'); ?>
+<?php include ('php/db.php'); ?>
 
 <div id="calendar"></div>
 

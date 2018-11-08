@@ -8,10 +8,11 @@
 			<h1>Mon profil</h1>
 			<br>
 			<?php require_once('php/profile.php');?>
+
 			<div>
-				<div>
-					<?php if(isset($_SESSION['connected'])) { ?>
-					<?php $_SESSION['user'] = $user ?>
+				<div class="profil">
+					<?php if(isset($_SESSION['user'])) { ?>
+					<?php $_SESSION['user']= $user ?>
 						<div> Nom :
 						<?php echo $user['first_name']; ?>
 						</div>

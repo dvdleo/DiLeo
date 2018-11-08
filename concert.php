@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php include('layouts/header.php'); ?>
 <?php include ('php/db.php'); ?>
 
@@ -12,18 +13,20 @@
 					<?php foreach($events as $event){ ?> 
 					<?php if($event['category_id'] == 1){ ?>
                       <div id="event_<?php echo $event['id']; ?>'">
-						<div style="font-size: 30px; margin-top: 20px; margin-bottom: 5px;">
+						<div class="titre">
 						<?php echo $event['name']; ?>
 						</div>
-						<div style="font-size: 18px;"> Lieu :
+						<div class='description'>
+						<div> Lieu :
 						<?php echo $event['place']; ?>
 						</div>
-						<div style="font-size: 18px;"> Date :
+						<div> Date :
 						<?php echo $event['date']; ?>
 						</div>
-						<div style="margin-bottom: 20px;font-size: 18px;"> Prix :
+						<div class="prix"> Prix :
 						<?php echo $event['price']; ?>
 						€
+						</div>
 						</div>
                           </div>
 						<?php } ?>
