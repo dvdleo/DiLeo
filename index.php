@@ -9,6 +9,9 @@ $description = '';
 <div class="row">
     <div class="col-sm-12 col-lg-8">
         <h1>Les prochains évènements</h1>
+        <br>
+        <br>
+        
 
         <?php require_once('php/get_events.php'); ?>
         

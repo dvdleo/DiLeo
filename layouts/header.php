@@ -9,7 +9,7 @@
     <nav class="navbar navbar-expand-lg" style="background-color: purple;">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav justify-content-center">
-          <img src="logo.png" width="30" height="30" alt="">
+          <img src="" width="30" height="30" alt="">
           <li class="nav-item">
             <a class="nav-link active" style="color: white; size: 50px;"  href="index.php">DiLeo</a>
           </li>
@@ -18,6 +18,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" style="color: white" href="calendrier.php">Calendrier</a>
+            <a href="calendar.php"></a>
           </li>
           <?php if(isset($_SESSION['connected']) && $_SESSION['connected'] === true){ ?>   
             <li class="nav-item">
