@@ -19,17 +19,22 @@
             <a class="nav-link" style="color: white" href="calendrier.php">Calendrier</a>
             <a href="calendar.php"></a>
           </li>
-          <?php if(isset($_SESSION['connected']) && $_SESSION['connected'] === true){ ?>   
+          <?php if(isset($_SESSION['connected']) && $_SESSION['connected'] === true){ ?>  
             <li class="nav-item">
               <a class="nav-link" style="color: white" href="add_event.php">Ajouter un évènement</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" style="color: lightgrey" href="logout.php">Deconnexion</a>
+              <a class="nav-link" style="color: white" href="profile.php">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" style="color: lightgrey" href="php/logout.php">Deconnexion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" style="color: lightgrey" data-toggle="collapse" role="button" href="#debuger">Debuger</a>
             </li>
+            
           <?php } else { ?>
+
             <li class="nav-item">
               <a class="nav-link" style="color: white" href="login.php">Connexion</a>
             </li>
