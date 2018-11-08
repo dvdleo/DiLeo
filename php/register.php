@@ -8,7 +8,7 @@ if(isset($_POST)) {
 	$first_name = $_POST ['first_name'];
 	$last_name 	= $_POST ['last_name'];
 	$email		= $_POST ['email'];
-	$password 	= $_POST ['password'];
+	$password 	= md5($_POST ['password']);
 
 	// On vérifie que les champs requis sont bien remplis
 	if(empty($first_name)) {
