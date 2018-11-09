@@ -7,7 +7,7 @@ $error = "";
 //si le formulaire est soumis...
 if(isset($_POST)) {
     $email     = $_POST["email"];
-    $password  = $_POST["password"];
+    $password  = md5($_POST["password"]);
 
     //on va chercher le user en bdd en fonction de son email
     $sql = "SELECT * FROM users WHERE email = :email";
